@@ -139,7 +139,7 @@ fn main() {
         let mut coef = vec![0.; num_vars];
         coef[var.idx] = 1.;
         model.add_constraint_geq(&coef, 0.);
-        println!("{:?} * x >= {}", &coef, 0.);
+        // println!("{:?} * x >= {}", &coef, 0.);
     }
 
     // 各オイルの生産量上限
@@ -154,7 +154,7 @@ fn main() {
         let qy_max = oil.qy_max as f64;
 
         model.add_constraint_leq(&coef, qy_max);
-        println!("{:?} * x <= {}: {} 生産量上限", &coef, qy_max, oil.name);
+        // println!("{:?} * x <= {}: {} 生産量上限", &coef, qy_max, oil.name);
     }
 
     // 各混合液の PN 下限
@@ -168,7 +168,7 @@ fn main() {
                 }
             }
             model.add_constraint_geq(&coef, 0.);
-            println!("{:?} * x >= {}: {} PN 下限", &coef, pn_min, product.name);
+            // println!("{:?} * x >= {}: {} PN 下限", &coef, pn_min, product.name);
         }
     }
 
@@ -183,7 +183,7 @@ fn main() {
                 }
             }
             model.add_constraint_leq(&coef, 0.);
-            println!("{:?} * x <= {}: {} RVP 上限", &coef, rvp_max, product.name);
+            // println!("{:?} * x <= {}: {} RVP 上限", &coef, rvp_max, product.name);
         }
     }
 
@@ -194,13 +194,13 @@ fn main() {
         obj_coef[var.idx] = price;
     }
     model.maximize(None, Some(&obj_coef));
-    println!("objective: maximize {obj_coef:?} * x");
+    // println!("objective: maximize {obj_coef:?} * x");
 
     let solver = model.solve();
 
-    println!("Solution (x)    = {:?}", solver.solution.x);
-    println!("Multipliers (z) = {:?}", solver.solution.z);
-    println!("Slacks (s)      = {:?}", solver.solution.s);
+    // println!("Solution (x)    = {:?}", solver.solution.x);
+    // println!("Multipliers (z) = {:?}", solver.solution.z);
+    // println!("Slacks (s)      = {:?}", solver.solution.s);
 
     println!();
     println!(
