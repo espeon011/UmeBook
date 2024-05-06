@@ -40,6 +40,8 @@ wheels/
 .venv
 
 # jupyter
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
 .virtual_documents
 
 # data directory
