@@ -27,3 +27,20 @@ Manifest.toml
 debug/
 target/
 Cargo.lock
+
+# python generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# venv
+.venv
+
+# jupyter
+.virtual_documents
+
+# data directory
+data/
