@@ -1,4 +1,9 @@
-[workspace]
+[package]
+name = "ex2_02"
+version = "0.1.0"
+edition = "2021"
 
-resolver = "2"
-members = [ "clarabel_wrapper" , "solve"]
+[dependencies]
+good_lp = { version = "1.8.1", default-features = false, features = ["clarabel"] }
+itertools = "0.12.1"
+polars = { version = "0.39.2", features = ["strings"] }
