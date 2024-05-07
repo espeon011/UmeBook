@@ -181,10 +181,12 @@ notebook-shim==0.2.4
     # via notebook
 numpy==1.26.4
     # via contourpy
+    # via ex4-01
     # via highspy
     # via matplotlib
     # via ortools
     # via pandas
+    # via scipy
 ortools==9.9.3963
     # via ex4-01
 overrides==7.7.0
@@ -222,6 +224,8 @@ psutil==5.9.8
 ptyprocess==0.7.0
     # via pexpect
     # via terminado
+pulp==2.8.0
+    # via ex4-01
 pure-eval==0.2.2
     # via stack-data
 pycparser==2.22
@@ -269,6 +273,8 @@ rfc3986-validator==0.1.1
 rpds-py==0.18.1
     # via jsonschema
     # via referencing
+scipy==1.13.0
+    # via ex4-01
 send2trash==1.8.3
     # via jupyter-server
 six==1.16.0
