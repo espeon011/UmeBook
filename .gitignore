@@ -46,3 +46,6 @@ wheels/
 
 # data directory
 data/
+
+# for macOS
+.DS_Store
